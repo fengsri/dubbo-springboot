@@ -16,3 +16,9 @@ dubbo:
   provider:
     timeout: 5000
 
+
+zookeeper:
+  server: 127.0.0.1:2181
+  lockPath: /springboot/
+
+

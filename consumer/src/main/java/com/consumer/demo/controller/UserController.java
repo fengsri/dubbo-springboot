@@ -6,6 +6,10 @@ import com.feng.model.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 消费者
+ * @author fengwen
+ */
 @RestController
 @RequestMapping(value = "user")
 public class UserController {
