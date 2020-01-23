@@ -22,23 +22,49 @@ public class UserController {
 
     /**
      * 减少数量，测试分布式锁
+     *
      * @param count
      * @return
      */
     @GetMapping("reduce")
-    public String reduce(@RequestParam("count") int count){
+    public String reduce(@RequestParam("count") int count) {
         String result = userService.reduce(count);
         return result;
     }
 
     /**
      * 减少数量，测试分布式锁
+     *
      * @param count
      * @return
      */
     @GetMapping("reduce2")
-    public String reduce2(@RequestParam("count") int count){
+    public String reduce2(@RequestParam("count") int count) {
         String result = userService.reduce(count);
+        return result;
+    }
+
+    /**
+     * 减少数量，测试分布式锁
+     *
+     * @param count
+     * @return
+     */
+    @GetMapping("reduce3")
+    public String reduce3(@RequestParam("id") String id, @RequestParam("count") int count) {
+        String result = userService.reduce(id, count);
+        return result;
+    }
+
+    /**
+     * 减少数量，测试分布式锁
+     *
+     * @param count
+     * @return
+     */
+    @GetMapping("reduce4")
+    public String reduce4(@RequestParam("id") String id, @RequestParam("count") int count) {
+        String result = userService.reduce(id, count);
         return result;
     }
 }

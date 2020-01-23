@@ -1,6 +1,11 @@
 spring:
   application:
     name: dubbo-provider
+  redis:
+    host: 47.105.165.182
+    password:
+    port: 6379
+    database: 0
 
 server:
   port: 8081
@@ -15,6 +20,7 @@ dubbo:
     address: zookeeper://127.0.0.1:2181
   provider:
     timeout: 5000
+
 
 
 zookeeper:
